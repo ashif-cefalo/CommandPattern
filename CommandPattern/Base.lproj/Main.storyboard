@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CommandPattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text Input" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9IP-bL-GMb">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6F-3E-i1g">
+                                <rect key="frame" x="16" y="65" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="nci-gD-FoB"/>
+                                    <constraint firstAttribute="height" constant="30" id="o8F-fX-HSU"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iRn-Zc-S3Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcN-qA-7Wu">
+                                <rect key="frame" x="69" y="65" width="58" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="F2c-1Y-xxN"/>
+                                    <constraint firstAttribute="width" constant="58" id="FaD-aZ-qYP"/>
+                                </constraints>
+                                <state key="normal" title="Remove"/>
+                                <connections>
+                                    <action selector="deleteButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WUb-Bq-e7N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob3-N3-RgL">
+                                <rect key="frame" x="260" y="65" width="38" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2oy-tN-fMx"/>
+                                    <constraint firstAttribute="width" constant="38" id="apn-Sb-fsJ"/>
+                                </constraints>
+                                <state key="normal" title="Undo"/>
+                                <connections>
+                                    <action selector="undoButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PCc-M4-Siy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnB-hp-0qc">
+                                <rect key="frame" x="323" y="65" width="36" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="e2S-eY-fJg"/>
+                                    <constraint firstAttribute="height" constant="30" id="z9U-54-ZcX"/>
+                                </constraints>
+                                <state key="normal" title="Redo"/>
+                                <connections>
+                                    <action selector="redoButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GoN-W7-Zoc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Nn-a0-FCJ">
+                                <rect key="frame" x="16" y="117" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OXm-fG-05Q"/>
+                                    <constraint firstAttribute="width" constant="48" id="xow-yF-aTA"/>
+                                </constraints>
+                                <state key="normal" title="update"/>
+                                <connections>
+                                    <action selector="updateButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NI3-bf-q48"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="At position" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="al1-Qs-9JT">
+                                <rect key="frame" x="147" y="134" width="212" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="Gvn-95-cjX"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGz-si-QXB">
+                                <rect key="frame" x="16" y="155" width="33" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="Hst-ws-9Bl"/>
+                                    <constraint firstAttribute="height" constant="30" id="q10-6J-r8V"/>
+                                </constraints>
+                                <state key="normal" title="Print"/>
+                                <connections>
+                                    <action selector="printButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2yn-yN-kRG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9IP-bL-GMb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="8Wa-T7-A4j"/>
+                            <constraint firstItem="al1-Qs-9JT" firstAttribute="top" secondItem="Ob3-N3-RgL" secondAttribute="bottom" constant="39" id="9NG-vH-C4m"/>
+                            <constraint firstAttribute="trailing" secondItem="LnB-hp-0qc" secondAttribute="trailing" constant="16" id="ARN-Yw-mNQ"/>
+                            <constraint firstItem="8Nn-a0-FCJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Ezw-4Z-khF"/>
+                            <constraint firstAttribute="trailing" secondItem="9IP-bL-GMb" secondAttribute="trailing" constant="16" id="QxG-4b-xEH"/>
+                            <constraint firstItem="LnB-hp-0qc" firstAttribute="top" secondItem="9IP-bL-GMb" secondAttribute="bottom" constant="7" id="TbH-5Y-aeW"/>
+                            <constraint firstItem="Ob3-N3-RgL" firstAttribute="top" secondItem="9IP-bL-GMb" secondAttribute="bottom" constant="7" id="Tc3-fi-LrN"/>
+                            <constraint firstAttribute="trailing" secondItem="al1-Qs-9JT" secondAttribute="trailing" constant="16" id="UJb-9y-Sq4"/>
+                            <constraint firstItem="8Nn-a0-FCJ" firstAttribute="top" secondItem="L6F-3E-i1g" secondAttribute="bottom" constant="22" id="UOR-Z3-b66"/>
+                            <constraint firstItem="9IP-bL-GMb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="WX4-fz-EJI"/>
+                            <constraint firstItem="TGz-si-QXB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Y8E-yN-Svg"/>
+                            <constraint firstItem="L6F-3E-i1g" firstAttribute="top" secondItem="9IP-bL-GMb" secondAttribute="bottom" constant="7" id="at6-MC-Q8l"/>
+                            <constraint firstItem="L6F-3E-i1g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="ayk-CU-aZe"/>
+                            <constraint firstItem="LcN-qA-7Wu" firstAttribute="top" secondItem="9IP-bL-GMb" secondAttribute="bottom" constant="7" id="dwh-0W-erg"/>
+                            <constraint firstItem="LnB-hp-0qc" firstAttribute="leading" secondItem="Ob3-N3-RgL" secondAttribute="trailing" constant="25" id="hfJ-Ro-Pzm"/>
+                            <constraint firstItem="LcN-qA-7Wu" firstAttribute="leading" secondItem="L6F-3E-i1g" secondAttribute="trailing" constant="23" id="i5N-Gp-WH2"/>
+                            <constraint firstItem="TGz-si-QXB" firstAttribute="top" secondItem="8Nn-a0-FCJ" secondAttribute="bottom" constant="8" id="yca-8F-u3X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indexField" destination="al1-Qs-9JT" id="7H5-es-mSU"/>
+                        <outlet property="stringInputField" destination="9IP-bL-GMb" id="CjL-lx-FRN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
